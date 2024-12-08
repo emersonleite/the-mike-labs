@@ -1,0 +1,43 @@
+@baseUrl = http://localhost:3000
+
+# @name Create
+POST {{baseUrl}}/residents HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Emerson Leite",
+  "apartment": "10",
+  "building":"Bloco C"
+}
+
+###
+# @name GetAll
+GET {{baseUrl}}/residents HTTP/1.1
+Content-Type: application/json
+
+###
+# @name GetOne
+GET {{baseUrl}}/residents/2 HTTP/1.1
+Content-Type: application/json
+
+###
+# @name Update
+PATCH {{baseUrl}}/residents/2 HTTP/1.1
+Content-Type: application/json
+
+{"name":"Douglas Leite"}
+
+###
+# @name Delete
+DELETE  {{baseUrl}}/residents/0 HTTP/1.1
+Content-Type: application/json
+
+
+
+
+
+
+
+
+
+
