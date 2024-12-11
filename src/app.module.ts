@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { ResidentsModule } from './residents/residents.module';
-
+import { TypeOrmModule } from '@nestjs/typeorm';
 
 /**
  * O módulo principal da aplicação (AppModule).
@@ -8,6 +8,14 @@ import { ResidentsModule } from './residents/residents.module';
  * conectando todos os recursos relacionados a moradores com o aplicativo principal.
  */
 @Module({
-  imports: [ResidentsModule], // Importa o módulo de moradores
+  imports: [
+    TypeOrmModule.forRoot({
+      type: 'sqlite',
+      database: 'database/db.sqlite',
+      autoLoadEntities: true, // Carrega entidades sem precisar especificá-las
+      synchronize: true, // Configuração de sincronização automática (não recomendado em produção)
+    }),
+    ResidentsModule,
+  ], // Importa o módulo de moradores
 })
 export class AppModule {}
