@@ -1,4 +1,4 @@
-import { IsString, MaxLength, IsNotEmpty, Matches } from 'class-validator';
+import { IsString, MaxLength, IsNotEmpty /* Matches */ } from 'class-validator';
 import { Transform } from 'class-transformer';
 
 /**
@@ -12,6 +12,7 @@ export class CreateResidentDto {
    * - Não pode estar vazio.
    */
   @IsString({ message: 'Apartment must be a string.' })
+  @MaxLength(50, { message: 'Name must not exceed 50 characters.' })
   @IsNotEmpty({ message: 'Apartment cannot be empty.' })
   apartment: string;
 
@@ -23,6 +24,7 @@ export class CreateResidentDto {
    */
   @IsString({ message: 'Building must be a string.' })
   @IsNotEmpty({ message: 'Building cannot be empty.' })
+  @MaxLength(50, { message: 'Name must not exceed 50 characters.' })
   @Transform(({ value }) => value.trim()) // Remove espaços em branco
   building: string;
 
