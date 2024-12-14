@@ -24,7 +24,7 @@ export class ResidentsService {
    * Busca um morador pelo ID.
    * Lança uma NotFoundException se o morador não for encontrado.
    */
-  findOne(id: number): Resident {
+  findOne(id: string): Resident {
     const resident = this.residents.find((r) => r.id === id);
     if (!resident) {
       // Retorna erro HTTP 404 com uma mensagem personalizada
@@ -33,11 +33,15 @@ export class ResidentsService {
     return resident;
   }
 
+  generateUuid() {
+    return crypto.randomUUID();
+  }
+
   /**
    * Adiciona um novo morador.
    */
   create(residentDto: CreateResidentDto): Resident {
-    const newResident = { ...residentDto, id: this.id++ };
+    const newResident = { ...residentDto, id: this.generateUuid() };
     this.residents.push(newResident);
     return newResident;
   }
@@ -46,7 +50,7 @@ export class ResidentsService {
    * Atualiza parcialmente os dados de um morador existente.
    * Caso o morador não seja encontrado, uma exceção é lançada.
    */
-  update(id: number, updateData: UpdateResidentDto): Resident {
+  update(id: string, updateData: UpdateResidentDto): Resident {
     const resident = this.findOne(id);
     Object.assign(resident, updateData); // Atualiza apenas os campos fornecidos
     return resident;
@@ -56,7 +60,7 @@ export class ResidentsService {
    * Remove um morador pelo ID.
    * Lança uma exceção caso o ID não exista.
    */
-  delete(id: number): void {
+  delete(id: string): void {
     const index = this.residents.findIndex((r) => r.id === id);
     if (index === -1) {
       throw new NotFoundException(`Resident with ID ${id} not found.`);

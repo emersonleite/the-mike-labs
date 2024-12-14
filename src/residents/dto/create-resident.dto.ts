@@ -8,8 +8,6 @@ import { Transform } from 'class-transformer';
 export class CreateResidentDto {
   /**
    * Número ou identificação do apartamento.
-   * - Deve ser uma string.
-   * - Não pode estar vazio.
    */
   @IsString({ message: 'Apartment must be a string.' })
   @MaxLength(50, { message: 'Name must not exceed 50 characters.' })
@@ -18,9 +16,6 @@ export class CreateResidentDto {
 
   /**
    * Nome ou identificação do prédio.
-   * - Deve ser uma string.
-   * - Não pode estar vazio.
-   * - Espaços desnecessários no início e no fim serão removidos automaticamente.
    */
   @IsString({ message: 'Building must be a string.' })
   @IsNotEmpty({ message: 'Building cannot be empty.' })
@@ -30,10 +25,6 @@ export class CreateResidentDto {
 
   /**
    * Nome do morador.
-   * - Deve ser uma string.
-   * - Não pode estar vazio.
-   * - Deve ter no máximo 50 caracteres.
-   * - Espaços desnecessários no início e no fim serão removidos automaticamente.
    */
   @IsString({ message: 'Name must be a string.' })
   @IsNotEmpty({ message: 'Name cannot be empty.' })

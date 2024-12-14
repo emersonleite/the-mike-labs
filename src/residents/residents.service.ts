@@ -2,65 +2,57 @@ import { Injectable, NotFoundException } from '@nestjs/common';
 import { CreateResidentDto } from './dto/create-resident.dto';
 import { UpdateResidentDto } from './dto/update-resident.dto';
 import { Resident } from './entities/resident.entity';
+import { InjectRepository } from '@nestjs/typeorm';
+import { Repository } from 'typeorm';
 
-/**
- * O serviço (ResidentsService) é responsável por gerenciar os dados
- * e a lógica de negócios relacionados a moradores.
- * Aqui, utilizamos um armazenamento em memória como exemplo.
- */
-@Injectable() // Decorador que marca esta classe como um provedor injetável
+@Injectable()
 export class ResidentsService {
-  private residents: Resident[] = []; // Simulação de um banco de dados em memória
-  private id: number = 0
+  private residents: Resident[] = [];
+  private id: number = 0;
 
-  /**
-   * Retorna todos os moradores cadastrados.
-   */
-  findAll(): Resident[] {
-    return this.residents;
+  constructor(
+    @InjectRepository(Resident) // Injetando o repositório a partir de Resident
+    private readonly residentRepository: Repository<Resident>,
+  ) {}
+
+  async findAll(): Promise<Resident[]> {
+    return await this.residentRepository.find();
   }
 
-  /**
-   * Busca um morador pelo ID.
-   * Lança uma NotFoundException se o morador não for encontrado.
-   */
-  findOne(id: number): Resident {
-    const resident = this.residents.find((r) => r.id === id);
+  async findOne(id: string): Promise<Resident> {
+    const resident = await this.residentRepository.findOne({
+      where: { id },
+    });
     if (!resident) {
-      // Retorna erro HTTP 404 com uma mensagem personalizada
       throw new NotFoundException(`Resident with ID ${id} not found.`);
     }
     return resident;
   }
 
-  /**
-   * Adiciona um novo morador.
-   */
-  create(residentDto: CreateResidentDto): Resident {
-    const newResident = {...residentDto, id: this.id++}
-    this.residents.push(newResident);
-    return newResident;
+  async create(residentDto: CreateResidentDto): Promise<Resident> {
+    const resident = this.residentRepository.create(residentDto);
+    return this.residentRepository.save(resident);
   }
 
-  /**
-   * Atualiza parcialmente os dados de um morador existente.
-   * Caso o morador não seja encontrado, uma exceção é lançada.
-   */
-  update(id: number, updateData: UpdateResidentDto): Resident {
-    const resident = this.findOne(id);
-    Object.assign(resident, updateData); // Atualiza apenas os campos fornecidos
-    return resident;
-  }
+  async update(id: string, updateResidentDto: UpdateResidentDto) {
+    const resident = await this.residentRepository.preload({
+      id,
+      ...updateResidentDto,
+    });
 
-  /**
-   * Remove um morador pelo ID.
-   * Lança uma exceção caso o ID não exista.
-   */
-  delete(id: number): void {
-    const index = this.residents.findIndex((r) => r.id === id);
-    if (index === -1) {
+    if (!resident) {
       throw new NotFoundException(`Resident with ID ${id} not found.`);
     }
-    this.residents.splice(index, 1); // Remove o morador da lista
+
+    return this.residentRepository.save(resident);
+  }
+
+  async delete(id: string): Promise<Resident> {
+    const resident = await this.residentRepository.findOneBy({ id });
+    if (!resident) {
+      throw new NotFoundException(`Resident with ID ${id} not found.`);
+    }
+    await this.residentRepository.remove(resident);
+    return resident;
   }
 }

@@ -1,5 +1,16 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete,  HttpCode,
-  Query, } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Post,
+  Body,
+  Patch,
+  Param,
+  Delete,
+  HttpCode,
+  Query,
+  ParseIntPipe,
+  ParseUUIDPipe,
+} from '@nestjs/common';
 import { ResidentsService } from './residents.service';
 import { CreateResidentDto } from './dto/create-resident.dto';
 import { UpdateResidentDto } from './dto/update-resident.dto';
@@ -30,7 +41,7 @@ export class ResidentsController {
    */
   @Get(':id') // Mapeia requisições GET com um parâmetro de rota
   findOne(@Param('id') id: string) {
-    return this.residentsService.findOne(+id); // Conversão automática do parâmetro para número
+    return this.residentsService.findOne(id); // Conversão automática do parâmetro para número
   }
 
   /**
@@ -40,7 +51,7 @@ export class ResidentsController {
    */
   @Post() // Mapeia requisições POST para este método
   create(@Body() residentDto: CreateResidentDto) {
-    console.log(residentDto)
+    console.log(residentDto);
     return this.residentsService.create(residentDto);
   }
 
@@ -50,10 +61,10 @@ export class ResidentsController {
    */
   @Patch(':id') // Mapeia requisições PATCH para este método
   update(
-    @Param('id') id: string,
+    @Param('id', ParseUUIDPipe) id: string,
     @Body() updateResidentDto: UpdateResidentDto,
   ) {
-    return this.residentsService.update(+id, updateResidentDto);
+    return this.residentsService.update(id, updateResidentDto);
   }
 
   /**
@@ -63,7 +74,7 @@ export class ResidentsController {
    */
   @Delete(':id') // Mapeia requisições DELETE para este método
   @HttpCode(204) // Responde com o código HTTP 204 (No Content)
-  remove(@Param('id') id: string) {
-    this.residentsService.delete(+id);
+  async remove(@Param('id') id: string) {
+    return await this.residentsService.delete(id);
   }
 }

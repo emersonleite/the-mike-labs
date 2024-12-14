@@ -8,8 +8,8 @@ import {
 
 @Entity()
 export class Resident {
-  @PrimaryGeneratedColumn()
-  id: number;
+  @PrimaryGeneratedColumn('uuid')
+  id: string;
 
   @Column({ type: 'varchar', length: 50 })
   name: string;
