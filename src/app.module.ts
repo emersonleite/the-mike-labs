@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
 import { ResidentsModule } from './residents/residents.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { NoticesModule } from './notices/notices.module';
 
 /**
  * O módulo principal da aplicação (AppModule).
@@ -16,6 +17,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       synchronize: true, // Configuração de sincronização automática (não recomendado em produção)
     }),
     ResidentsModule,
+    NoticesModule,
   ], // Importa o módulo de moradores
 })
 export class AppModule {}
