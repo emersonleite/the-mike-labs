@@ -5,9 +5,12 @@ POST {{baseUrl}}/residents HTTP/1.1
 Content-Type: application/json
 
 {
-  "name": "Emerson Leite",
-  "apartment": "10",
-  "building":"Bloco C"
+  "name": "Emerson Batista",
+  "apartment": "11",
+  "building":"Bloco F",
+  "email": "emerson.bl.6@gmail.com",
+  "password":"142743Co@#$7*",
+  "phone":"5599985203020"
 }
 
 ###
@@ -22,14 +25,14 @@ Content-Type: application/json
 
 ###
 # @name Update
-PATCH {{baseUrl}}/residents/2 HTTP/1.1
+PATCH {{baseUrl}}/residents/9816b384-726e-45d2-ac69-72b37b5eff29 HTTP/1.1
 Content-Type: application/json
 
-{"name":"Douglas Leite"}
+{"name":"Douglas Leite", "building":"ola"}
 
 ###
 # @name Delete
-DELETE  {{baseUrl}}/residents/0 HTTP/1.1
+DELETE  {{baseUrl}}/residents/d27ae9e3-b639-4fdf-b502-190942807e22 HTTP/1.1
 Content-Type: application/json
 
 
