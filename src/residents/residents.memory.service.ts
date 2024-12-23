@@ -11,7 +11,6 @@ import { Resident } from './entities/resident.entity';
 @Injectable() // Decorador que marca esta classe como um provedor injetável
 export class ResidentsService {
   private residents: Resident[] = []; // Simulação de um banco de dados em memória
-  private id: number = 0;
 
   /**
    * Retorna todos os moradores cadastrados.
@@ -41,7 +40,11 @@ export class ResidentsService {
    * Adiciona um novo morador.
    */
   create(residentDto: CreateResidentDto): Resident {
-    const newResident = { ...residentDto, id: this.generateUuid() };
+    const newResident = {
+      ...residentDto,
+      id: this.generateUuid(),
+      passwordHash: residentDto.password,
+    };
     this.residents.push(newResident);
     return newResident;
   }

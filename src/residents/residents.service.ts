@@ -7,9 +7,6 @@ import { Repository } from 'typeorm';
 
 @Injectable()
 export class ResidentsService {
-  private residents: Resident[] = [];
-  private id: number = 0;
-
   constructor(
     @InjectRepository(Resident) // Injetando o repositório a partir de Resident
     private readonly residentRepository: Repository<Resident>,
@@ -30,7 +27,10 @@ export class ResidentsService {
   }
 
   async create(residentDto: CreateResidentDto): Promise<Resident> {
-    const resident = this.residentRepository.create(residentDto);
+    const resident = this.residentRepository.create({
+      ...residentDto,
+      passwordHash: residentDto.password,
+    });
     return this.residentRepository.save(resident);
   }
 

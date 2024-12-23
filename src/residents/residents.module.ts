@@ -10,7 +10,7 @@ import { Resident } from './entities/resident.entity';
  * Ele registra o serviço e o controlador relacionados aos moradores.
  */
 @Module({
-  imports: [TypeOrmModule.forFeature([Resident])], // Importa as entidades necessárias para o módulo
+  imports: [TypeOrmModule.forFeature([Resident])], // Importa as entidades necessárias para o módulo e permite a criação da tabela no banco de dados
   controllers: [ResidentsController], // Define os controladores do módulo
   providers: [ResidentsService], // Define os provedores (services) do módulo
 })
