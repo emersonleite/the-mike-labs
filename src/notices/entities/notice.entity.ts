@@ -1,7 +1,10 @@
+import { Resident } from 'src/residents/entities/resident.entity';
 import {
   Column,
   CreateDateColumn,
   Entity,
+  JoinColumn,
+  ManyToOne,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from 'typeorm';
@@ -27,6 +30,12 @@ export class Notice {
 
   @CreateDateColumn()
   createdAt?: Date;
+
+  //Criar relacionamento com Resident
+  // Relação de muitos para um, pois um residente pode criar vários avisos
+  @ManyToOne(() => Resident)
+  @JoinColumn({ name: 'createdBy' })
+  createdBy: Resident;
 
   @UpdateDateColumn()
   updatedAt?: Date;
