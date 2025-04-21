@@ -44,6 +44,7 @@ export class ResidentsService {
       ...residentDto,
       id: this.generateUuid(),
       passwordHash: residentDto.password,
+      notices: [],
     };
     this.residents.push(newResident);
     return newResident;

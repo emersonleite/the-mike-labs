@@ -1,11 +1,14 @@
 import {
   IsString,
   MaxLength,
-  IsNotEmpty /* Matches */,
+  IsNotEmpty,
   IsEmail,
   IsStrongPassword,
   IsPhoneNumber,
 } from 'class-validator';
+// <--- Valor possível para expressões regulares:
+/* Matches */
+
 import { Transform } from 'class-transformer';
 
 /**
@@ -13,53 +16,35 @@ import { Transform } from 'class-transformer';
  * criar um novo morador. Validações específicas garantem a integridade dos dados.
  */
 export class CreateResidentDto {
-  /**
-   * Número ou identificação do apartamento.
-   */
   @IsString({ message: 'Apartment must be a string.' })
   @MaxLength(50, { message: 'Name must not exceed 50 characters.' })
   @IsNotEmpty({ message: 'Apartment cannot be empty.' })
-  apartment: string;
+  apartment: string; // Número ou identificação do apartamento.
 
-  /**
-   * Nome ou identificação do prédio.
-   */
   @IsString({ message: 'Building must be a string.' })
   @IsNotEmpty({ message: 'Building cannot be empty.' })
   @MaxLength(50, { message: 'Name must not exceed 50 characters.' })
   @Transform(({ value }) => value.trim()) // Remove espaços em branco
-  building: string;
+  building: string; //  Nome ou identificação do prédio.
 
-  /**
-   * Nome do morador.
-   */
   @IsString({ message: 'Name must be a string.' })
   @IsNotEmpty({ message: 'Name cannot be empty.' })
   @MaxLength(50, { message: 'Name must not exceed 50 characters.' })
   @Transform(({ value }) => value.trim())
-  name: string;
+  name: string; // Nome do morador
 
-  /**
-   * Nome do morador.
-   */
   @IsEmail()
-  @IsNotEmpty({ message: 'Name cannot be empty.' })
+  @IsNotEmpty({ message: 'Email cannot be empty.' })
   @Transform(({ value }) => value.trim())
-  email: string;
+  email: string; // Email do morador
 
-  /**
-   * Telefone do morador.
-   */
   @IsNotEmpty({ message: 'Phone cannot be empty.' })
   @IsPhoneNumber('BR')
   @Transform(({ value }) => value.trim())
-  phone: string;
+  phone: string; // Telefone do morador
 
-  /**
-   * Senha do morador.
-   */
   @IsStrongPassword({ minLength: 8, minNumbers: 4, minSymbols: 1 })
-  @IsNotEmpty({ message: 'Name cannot be empty.' })
+  @IsNotEmpty({ message: 'Password cannot be empty.' })
   @Transform(({ value }) => value.trim())
-  password: string;
+  password: string; // Senha do morador
 }

@@ -1,8 +1,10 @@
 import { Exclude } from 'class-transformer';
+import { Notice } from 'src/notices/entities/notice.entity';
 import {
   Column,
   CreateDateColumn,
   Entity,
+  OneToMany,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from 'typeorm';
@@ -36,4 +38,9 @@ export class Resident {
 
   @UpdateDateColumn()
   updatedAt?: Date;
+
+  // Relacionamento de um residente para muitos avisos, pois
+  // um residente pode criar vários avisos
+  @OneToMany(() => Notice, (notice) => notice.createdBy)
+  notices: Notice[];
 }

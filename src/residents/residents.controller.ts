@@ -8,7 +8,6 @@ import {
   Delete,
   HttpCode,
   Query,
-  ParseIntPipe,
   ParseUUIDPipe,
 } from '@nestjs/common';
 import { ResidentsService } from './residents.service';
@@ -51,8 +50,7 @@ export class ResidentsController {
    */
   @Post() // Mapeia requisições POST para este método
   create(@Body() residentDto: CreateResidentDto) {
-    console.log(residentDto);
-    return this.residentsService.create(residentDto);
+    return this.residentsService.create_alternative(residentDto);
   }
 
   /**
