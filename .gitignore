@@ -1,7 +1,14 @@
-# compiled output
-/dist
+# Monorepo outputs
 /node_modules
+/dist
 /build
+/.turbo
+
+# Apps and packages
+/apps/*/node_modules
+/apps/*/dist
+/packages/*/node_modules
+/packages/*/dist
 
 # Logs
 logs
