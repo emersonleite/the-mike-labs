@@ -31,7 +31,7 @@ const projects = [
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum. Nunc non posuere consectetur, justo erat semper enim, non hendrerit dui odio id enim.',
     link: '/',
     img: {
-      src: '/assets/images/project-web-design.png',
+      src: '/assets/images/projects/project-web-design.png',
       alt: 'Project Web Design',
     },
     category: {
@@ -47,7 +47,7 @@ const projects = [
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum. Nunc non posuere consectetur, justo erat semper enim, non hendrerit dui odio id enim.',
     link: '/',
     img: {
-      src: '/assets/images/project-fire.png',
+      src: '/assets/images/projects/project-fire.png',
       alt: 'Project Fire',
     },
     category: {
@@ -62,7 +62,7 @@ const projects = [
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum. Nunc non posuere consectetur, justo erat semper enim, non hendrerit dui odio id enim.',
     link: '/',
     img: {
-      src: '/assets/images/project-maps.png',
+      src: '/assets/images/projects/project-maps.png',
       alt: 'Project Maps',
     },
     category: {

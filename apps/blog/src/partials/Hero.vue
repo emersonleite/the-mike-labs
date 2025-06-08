@@ -1,28 +1,21 @@
 <template>
   <Section>
     <HeroAvatar>
-      <template #title> Hi there, I'm <GradientText>barthol0</GradientText> 👋 </template>
+      <template #title> Olá, eu sou o <GradientText>Emerson</GradientText> 👋 </template>
       <template #description
-        >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-        <a href="" class="text-cyan-400 hover:underline">malesuada</a> nisi tellus, non imperdiet nisi tempor at. Lorem
-        ipsum dolor sit amet, <a href="" class="text-cyan-400 hover:underline">consectetur</a> adipiscing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore.</template
-      >
+        >Nesse misto de site e blog vou apresentar meus projetos e pensamentos. Ele é especimente dedicado ao meu eterno
+        cãozinho <a href="" class="text-cyan-400 hover:underline">Mike Tyson</a> (in memoriam).
+      </template>
+
       <template #avatar>
-        <img class="h-64 w-64" :src="'/assets/images/mike.png'" alt="Avatar image" loading="lazy" />
+        <img class="h-64 w-64" :src="'/assets/images/social/mike.png'" alt="Avatar image" loading="lazy" />
       </template>
       <template v-slot:socialButtons>
         <a href="/">
-          <HeroSocial :src="'/assets/images/twitter-icon.png'" :alt="'Twitter icon'" />
+          <HeroSocial :src="'/assets/images/social/linkedin-icon.png'" :alt="'Linkedin icon'" />
         </a>
         <a href="/">
-          <HeroSocial :src="'/assets/images/facebook-icon.png'" :alt="'Facebook icon'" />
-        </a>
-        <a href="/">
-          <HeroSocial :src="'/assets/images/linkedin-icon.png'" :alt="'Linkedin icon'" />
-        </a>
-        <a href="/">
-          <HeroSocial :src="'/assets/images/youtube-icon.png'" :alt="'Youtube icon'" />
+          <HeroSocial :src="'/assets/images/social/github-icon.png'" :alt="'Github icon'" />
         </a>
       </template>
     </HeroAvatar>
