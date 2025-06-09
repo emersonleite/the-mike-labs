@@ -1,7 +1,10 @@
 <template>
   <Section>
     <HeroAvatar>
-      <template #title> Olá, eu sou o <GradientText>Emerson</GradientText> 👋 </template>
+      <template #title>
+        Olá, eu sou o <GradientText>Emerson Leite</GradientText>!
+        <!-- 👋 -->
+      </template>
 
       <template v-slot:socialButtons>
         <a class="mr-2" href="/">
@@ -21,7 +24,7 @@
       </template>
 
       <template #avatar>
-        <img class="h-64 w-64" :src="'/assets/images/social/mike.png'" alt="Avatar image" loading="lazy" />
+        <img class="h-40 w-40" :src="'/assets/images/social/mike.png'" alt="Avatar image" loading="lazy" />
       </template>
     </HeroAvatar>
   </Section>
