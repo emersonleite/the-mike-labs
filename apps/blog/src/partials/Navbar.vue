@@ -2,7 +2,12 @@
   <Section>
     <NavbarTwoColumns>
       <a href="/">
-        <img class="h-32 w-32" :src="'/assets/images/logo/hey_mike-logo.png'" alt="Avatar image" loading="lazy" />
+        <img
+          class="h-32 w-32"
+          :src="'/assets/images/logo/hey_mike-logo-yellow.png'"
+          alt="Avatar image"
+          loading="lazy"
+        />
       </a>
 
       <NavMenu>
