@@ -1,5 +1,5 @@
 {
-  "name": "api",
+  "name": "condo-management",
   "version": "0.0.1",
   "scripts": {
     "dev": "nest start --watch",
