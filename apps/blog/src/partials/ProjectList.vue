@@ -1,6 +1,6 @@
 <template>
   <Section>
-    <template #title>Recent <GradientText>Projects</GradientText></template>
+    <template #title><GradientText>Projetos</GradientText> recentes</template>
     <div class="flex flex-col gap-6">
       <Project
         v-for="project in projects"

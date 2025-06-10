@@ -2,7 +2,7 @@
   <Section>
     <template #title>
       <div class="flex items-baseline justify-between">
-        <div>Recent <GradientText>Posts</GradientText></div>
+        <div><GradientText>Posts</GradientText> recentes</div>
         <div class="text-sm">
           <a href="/blog/">View all Posts →</a>
         </div>
