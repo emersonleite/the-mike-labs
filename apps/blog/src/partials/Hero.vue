@@ -1,19 +1,16 @@
 <template>
   <Section>
     <HeroAvatar>
-      <template #title>
-        Olá, eu sou o <GradientText>Emerson Leite</GradientText>!
-        <!-- 👋 -->
-      </template>
+      <!-- <template #title> Olá, eu sou o <GradientText>Emerson Leite</GradientText>! </template> -->
 
-      <template v-slot:socialButtons>
+      <!--  <template v-slot:socialButtons>
         <a class="mr-2" href="/">
           <HeroSocial :src="'/assets/images/social/linkedin-icon.png'" :alt="'Linkedin icon'" />
         </a>
         <a href="/">
           <HeroSocial :src="'/assets/images/social/github-icon.png'" :alt="'Github icon'" />
         </a>
-      </template>
+      </template> -->
 
       <template #description
         >O objetivo desse blog é apresentar meus projetos e pensamentos. Pretendo falar sobre tecnologia, como ela pode
