@@ -1,7 +1,7 @@
 <template>
   <Section>
     <HeroAvatar>
-      <!-- <template #title> Olá, eu sou o <GradientText>Emerson Leite</GradientText>! </template> -->
+      <template #title> <GradientText>Hey Mike</GradientText>!</template>
 
       <!--  <template v-slot:socialButtons>
         <a class="mr-2" href="/">
@@ -17,7 +17,7 @@
         facilitar nossa vida entre outros aspectos. Minha intenção é, também, abordar outros assuntos, apresentados de
         forma natural e que mostrem um pouco sobre como penso e vivo (não, necessariamente nesse ordem). Esse blog é
         especialmente dedicado ao meu eterno cãozinho <a href="" class="text-cyan-400 hover:underline">Mike</a> (in
-        memoriam) que dá nome a ele (blog), representado, alegremente, ao lado.
+        memoriam) que dá nome a ele (blog), representado em forma de figura, alegre, ao lado.
       </template>
 
       <template #avatar>

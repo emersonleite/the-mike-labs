@@ -4,7 +4,7 @@
       <div class="flex items-baseline justify-between">
         <div><GradientText>Posts</GradientText> recentes</div>
         <div class="text-sm">
-          <a href="/blog/">View all Posts →</a>
+          <a href="/blog/">Ver todos os posts (View all Posts) →</a>
         </div>
       </div>
     </template>
