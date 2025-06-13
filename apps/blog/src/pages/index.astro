@@ -3,6 +3,7 @@ import CTA from '@/partials/CTA.vue';
 import Hero from '@/partials/Hero.vue';
 import ProjectList from '@/partials/ProjectList.vue';
 import RecentPosts from '@/partials/RecentPosts.vue';
+import TopHero from '@/partials/TopHero.vue';
 import Base from '@/templates/Base.astro';
 import { AppConfig } from '@/utils/AppConfig';
 import { sortByDate } from '@/utils/Posts';
@@ -17,6 +18,7 @@ const { description } = AppConfig;
 
 <Base head={{ title, description }}>
   <Hero />
+  <!-- <TopHero /> -->
   <ProjectList />
   <RecentPosts postList={lastThreePosts} />
   <CTA />
