@@ -50,12 +50,12 @@ const faqs = [
   {
     question: 'Homens também podem praticar Pole Dance?',
     answer:
-      'Sim! O Pole é uma atividade acessível a todos. Temos turmas mistas e instrutores capacitados para receber qualquer pessoa interessada.',
+      'Sim! O Pole é uma atividade acessível a todos. Temos turmas mistas e instrutores capacitados para receber todos os interessados, independente do gênero ou idade.',
   },
   {
     question: 'A partir de qual idade posso começar?',
     answer:
-      'Indicamos a partir dos 16 anos, mas avaliamos casos específicos com os responsáveis. Não há limite de idade para começar.',
+      'Não há limite de idade para começar a praticar o Pole Dance. Contudo, a avaliação do(a) interessado(a) é aconselhável.',
   },
 ];
 </script>
