@@ -1,0 +1,23 @@
+<template>
+  <div
+    :class="[
+      'rounded-2xl p-6 text-center shadow-md border transition-colors duration-300',
+      dark ? 'bg-dark2 border-border text-white' : 'bg-card border-border text-text',
+    ]"
+  >
+    <img :src="foto" :alt="nome" class="w-28 h-28 mx-auto rounded-full object-cover mb-4 border-4 border-primary" />
+    <h3 class="text-xl font-semibold text-primary">{{ nome }}</h3>
+    <p class="text-md mt-2 leading-relaxed font-lato" :class="dark ? 'text-muted' : 'text-text'">
+      {{ bio }}
+    </p>
+  </div>
+</template>
+
+<script setup lang="ts">
+defineProps<{
+  nome: string;
+  foto: string;
+  bio: string;
+  dark?: boolean;
+}>();
+</script>

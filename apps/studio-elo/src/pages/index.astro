@@ -1,0 +1,43 @@
+---
+import HeroSection from '@/partials/HeroSection.vue';
+import InstructorSection from '@/partials/InstructorSection.vue';
+import DepoimentSection from '@/partials/DepoimentSection.vue';
+import LocationSection from '@/partials/LocationSection.vue';
+import ScheduleSection from '@/partials/ScheduleSection.vue';
+import ScheduleCalendarSection from '@/partials/ScheduleCalendarSection_1.vue';
+import ScheduleCalendarSection2 from '@/partials/ScheduleCalendarSection_2.vue';
+import ScheduleCalendarSection3 from '@/partials/ScheduleCalendarSection_3.vue';
+import CTASection from '@/partials/CTASection.vue';
+import FaqSection from '@/partials/FaqSection.vue';
+import BenefitsSection from '@/partials/BenefitsSection.vue';
+import FooterSection from '@/partials/FooterSection.vue';
+import About from '@/partials/About.vue';
+import Header from '@/partials/Header.vue';
+import Base from '@/templates/Base.astro';
+import { AppConfig } from '@/utils/AppConfig';
+import DepoimentCard from '@/components/DepoimentCard.vue';
+
+const { title } = AppConfig;
+const { description } = AppConfig;
+---
+
+<Base head={{ title, description }}>
+  <Header />
+  <HeroSection />
+  <About />
+  <InstructorSection dark />
+  <BenefitsSection />
+  <DepoimentSection dark />
+  <!-- <div>Opção 1</div>
+  <ScheduleSection />
+  <div>Opção 2</div>
+  <ScheduleCalendarSection />
+  <div>Opção 3</div>
+  <ScheduleCalendarSection2 /> -->
+
+  <ScheduleCalendarSection3 dark />
+  <FaqSection />
+  <LocationSection dark />
+  <CTASection dark />
+  <FooterSection dark />
+</Base>

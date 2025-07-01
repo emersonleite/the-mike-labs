@@ -1,0 +1,16 @@
+---
+import BlogPost from '@/partials/BlogPost.vue';
+import CTA from '@/partials/CTA.vue';
+import Base from '@/templates/Base.astro';
+import { AppConfig } from '@/utils/AppConfig';
+
+const { content } = Astro.props;
+const title = `${content.title} - ${AppConfig.site_name}`;
+---
+
+<Base head={{ title, description: content.description }}>
+  <BlogPost content={content}>
+    <slot />
+  </BlogPost>
+  <CTA />
+</Base>

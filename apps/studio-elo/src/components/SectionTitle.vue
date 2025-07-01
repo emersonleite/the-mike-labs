@@ -1,0 +1,7 @@
+<template>
+  <h2 class="font-script text-5xl md:text-7xl leading-tight font-bold text-primary mb-6 text-center">
+    <slot />
+  </h2>
+</template>
+
+<script setup lang="ts"></script>
