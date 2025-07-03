@@ -7,7 +7,7 @@
   >
     <img :src="foto" :alt="nome" class="w-28 h-28 mx-auto rounded-full object-cover mb-4 border-4 border-primary" />
     <h3 class="text-xl font-semibold text-primary">{{ nome }}</h3>
-    <p class="text-md mt-2 leading-relaxed font-lato" :class="dark ? 'text-muted' : 'text-text'">
+    <p class="text-md mt-2 leading-relaxed font-sans-2" :class="dark ? 'text-muted' : 'text-text'">
       {{ bio }}
     </p>
   </div>

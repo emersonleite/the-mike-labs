@@ -17,7 +17,7 @@
         >
           <!-- Ícone (ainda numérico) -->
           <div
-            class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 text-primary text-xl font-bold font-lato"
+            class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 text-primary text-xl font-bold font-sans-2"
           >
             {{ index + 1 }}
           </div>
@@ -26,7 +26,7 @@
             <h3 class="text-lg font-semibold text-primary mb-1">
               {{ beneficio.titulo }}
             </h3>
-            <p class="text-md leading-relaxed font-lato" :class="dark ? 'text-white/70' : 'text-text'">
+            <p class="text-md leading-relaxed font-sans-2" :class="dark ? 'text-white/70' : 'text-text'">
               {{ beneficio.descricao }}
             </p>
           </div>

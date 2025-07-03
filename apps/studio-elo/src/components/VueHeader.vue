@@ -4,7 +4,7 @@
       <img :src="'/assets/logo.png'" alt="Logo Elô Alcântara" class="h-20" />
     </div>
 
-    <nav class="hidden md:flex gap-6 text-md font-medium text-muted font-lato">
+    <nav class="hidden md:flex gap-6 text-md font-medium text-muted font-sans-2">
       <a href="#sobre" class="hover:text-primary transition">Sobre</a>
       <a href="#equipe" class="hover:text-primary transition">Equipe</a>
       <a href="#beneficios" class="hover:text-primary transition">Benefícios</a>

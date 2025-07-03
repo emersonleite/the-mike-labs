@@ -18,19 +18,19 @@
     <div class="relative z-20 max-w-2xl">
       <!-- <h1 class="text-4xl md:text-6xl font-bold font-sans mb-4 text-primary">Transforme-se, liberte-se e revele-se!</h1> -->
       <h1
-        class="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent font-lato"
+        class="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent font-sans-2"
       >
         Transforme-se, liberte-se e revele-se!
       </h1>
       <!-- <SectionTitle class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
         Transforme-se, liberte-se e revele-se!</SectionTitle
       > -->
-      <p class="text-lg md:text-xl tesxt-muted mb-8 font-lato">
+      <p class="text-lg md:text-xl tesxt-muted mb-8 font-sans-2">
         Aulas de Pole Dance para elevar sua autoestima, força e feminilidade.
       </p>
       <a
         href="#quero"
-        class="inline-block bg-secondary text-white font-semibold px-6 py-3 rounded-xl hover:bg-secondaryDark transition font-lato"
+        class="inline-block bg-secondary text-white font-semibold px-6 py-3 rounded-xl hover:bg-secondaryDark transition font-sans-2"
       >
         Quero agendar uma aula experimental
       </a>

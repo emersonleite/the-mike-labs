@@ -3,7 +3,7 @@
     <div class="max-w-4xl mx-auto text-center">
       <h2
         :class="[
-          'text-3xl md:text-4xl font-bold mb-8 font-lato text-center',
+          'text-3xl md:text-4xl font-bold mb-8 font-sans-2 text-center',
           props.dark ? 'text-primary' : 'text-primary',
         ]"
       >
@@ -12,7 +12,7 @@
 
       <p
         :class="[
-          'mb-10 max-w-3xl mx-auto font-lato text-lg md:text-xl',
+          'mb-10 max-w-3xl mx-auto font-sans-2 text-lg md:text-xl',
           props.dark ? 'text-gray-300' : 'text-gray-700',
         ]"
       >
@@ -21,7 +21,7 @@
 
       <ul
         :class="[
-          'mb-12 max-w-md mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 text-left font-lato text-base',
+          'mb-12 max-w-md mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 text-left font-sans-2 text-base',
           props.dark ? 'text-gray-300' : 'text-gray-600',
         ]"
       >
@@ -38,7 +38,7 @@
         target="_blank"
         rel="noopener noreferrer"
         :class="[
-          'inline-block font-semibold py-4 px-8 rounded-xl transition text-white text-lg font-lato',
+          'inline-block font-semibold py-4 px-8 rounded-xl transition text-white text-lg font-sans-2',
           props.dark ? 'bg-secondary hover:bg-secondaryDark' : 'bg-secondary hover:bg-secondaryDark',
         ]"
       >

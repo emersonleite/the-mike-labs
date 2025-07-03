@@ -13,11 +13,11 @@
           ]"
         >
           <summary
-            class="cursor-pointer font-semibold text-lg text-primary mb-2 hover:text-secondary transition font-lato"
+            class="cursor-pointer font-semibold text-lg text-primary mb-2 hover:text-secondary transition font-sans-2"
           >
             {{ item.question }}
           </summary>
-          <p class="mt-2 text-md leading-relaxed font-lato">
+          <p class="mt-2 text-md leading-relaxed font-sans-2">
             {{ item.answer }}
           </p>
         </details>

@@ -6,11 +6,11 @@
     ]"
   >
     <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-      <p class="font-lato text-muted font-semibold text-lg md:text-xl text-center md:text-left">
+      <p class="font-sans-2 text-muted font-semibold text-lg md:text-xl text-center md:text-left">
         Transforme-se, liberte-se e revele-se!
       </p>
 
-      <p class="text-sm md:text-base font-lato text-center md:text-left">
+      <p class="text-sm md:text-base font-sans-2 text-center md:text-left">
         © {{ currentYear }} Elô Alcântara Studio de Dança. Todos os direitos reservados.
       </p>
 

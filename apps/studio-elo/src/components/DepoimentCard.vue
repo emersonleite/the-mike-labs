@@ -11,7 +11,7 @@
       />
     </svg>
 
-    <p class="text-base leading-relaxed font-lato mb-6 italic">"{{ bio }}"</p>
+    <p class="text-base leading-relaxed font-sans-2 mb-6 italic">"{{ bio }}"</p>
 
     <div class="flex items-center gap-4 mt-auto">
       <img :src="foto" :alt="`Foto de ${nome}`" class="w-12 h-12 rounded-full object-cover border border-primary" />
