@@ -4,7 +4,7 @@
 
 <script setup lang="ts">
 import { PropType } from 'vue';
-import VueNavbar from '@/components/VueNavbar.vue';
+import VueNavbar from '@/components/obsolete/VueNavbar.vue';
 
 defineProps({
   colors: {

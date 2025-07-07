@@ -56,7 +56,7 @@
 </template>
 
 <script setup lang="ts">
-import SectionTitle from '@/components/SectionTitle.vue';
+import SectionTitle from '@/components/obsolete/SectionTitle.vue';
 
 const props = defineProps<{
   dark?: boolean;
