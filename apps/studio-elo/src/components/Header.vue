@@ -114,15 +114,4 @@ const navLinks = [
   opacity: 0;
   transform: translateY(-10px);
 }
-
-/* Cores para o modo dark */
-.bg-dark-1 {
-  background-color: #1a202c; /* exemplo bg escuro */
-}
-.text-primary-light {
-  color: #fbbf24; /* exemplo amarelo claro */
-}
-.text-muted {
-  color: #6b7280; /* cinza médio */
-}
 </style>
