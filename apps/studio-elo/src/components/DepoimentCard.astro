@@ -1,0 +1,28 @@
+---
+import Icon from '@/components/icons/Icon.astro';
+
+const { nome, foto, bio, dark = false } = Astro.props;
+---
+
+<div
+  class={`rounded-2xl shadow-md p-6 h-full flex flex-col justify-between transition
+  ${dark ? 'bg-dark-2 text-gray-100 border border-border' : 'bg-white text-text border border-border'}`}
+>
+  <Icon name="mdi:format-quote-open" size="50" class="mb-4 text-primary opacity-80" />
+
+  <p class="text-base leading-relaxed font-sans-2 mb-6 italic">"{bio}"</p>
+
+  <div class="flex items-center gap-4 mt-auto">
+    <img src={foto} alt={`Foto de ${nome}`} class="w-12 h-12 rounded-full object-cover border border-primary" />
+    <div>
+      <p class="font-semibold text-primary">{nome}</p>
+      <div class="flex gap-1 mt-1 text-yellow-400">
+        {
+          Array.from({ length: 5 }).map((_, i) => (
+            <Icon name="mdi:star" size="16" class="text-yellow-400" key={`star-${i}`} />
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</div>

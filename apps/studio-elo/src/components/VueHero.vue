@@ -39,8 +39,6 @@
 </template>
 
 <script setup lang="ts">
-import HeroTitle from './HeroTitle.vue';
-import SectionTitle from './SectionTitle.vue';
 // Nenhuma lógica JS no momento
 </script>
 

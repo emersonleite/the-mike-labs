@@ -803,6 +803,18 @@
   resolved "https://registry.npmjs.org/@humanwhocodes/object-schema/-/object-schema-2.0.3.tgz#4a2868d75d6d6963e423bcf90b7fd1be343409d3"
   integrity sha512-93zYdMES/c1D69yZiKDBj0V24vqNzB/koF26KPaagAfd3P/4gUlh3Dys5ogAK+Exi9QyzlD8x/08Zt7wIKcDcA==
 
+"@iconify/types@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.npmjs.org/@iconify/types/-/types-2.0.0.tgz#ab0e9ea681d6c8a1214f30cd741fe3a20cc57f57"
+  integrity sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==
+
+"@iconify/vue@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.npmjs.org/@iconify/vue/-/vue-5.0.0.tgz#c47e4b3a225a64bbf28dce924934f23e54b061a4"
+  integrity sha512-C+KuEWIF5nSBrobFJhT//JS87OZ++QDORB6f2q2Wm6fl2mueSTpFBeBsveK0KW9hWiZ4mNiPjsh6Zs4jjdROSg==
+  dependencies:
+    "@iconify/types" "^2.0.0"
+
 "@img/sharp-darwin-arm64@0.33.5":
   version "0.33.5"
   resolved "https://registry.npmjs.org/@img/sharp-darwin-arm64/-/sharp-darwin-arm64-0.33.5.tgz#ef5b5a07862805f1e8145a377c8ba6e98813ca08"

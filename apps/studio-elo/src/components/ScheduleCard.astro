@@ -1,0 +1,28 @@
+---
+import Icon from '@/components/icons/Icon.astro';
+
+const { day, classes = [], dark = false } = Astro.props;
+---
+
+<div
+  class={`rounded-2xl p-6 shadow-md border ${dark ? 'bg-dark-1 border-border text-white' : 'bg-white border-border text-text'}`}
+>
+  <h3 class="text-xl font-bold text-secondary mb-4 tracking-wide text-center font-sans-2">
+    {day}
+  </h3>
+
+  {
+    classes.map((classItem) => (
+      <div
+        class={`mb-4 p-4 rounded-xl border shadow-inner flex flex-col gap-1 ${dark ? 'bg-dark-2 border-primary/30' : 'bg-background border-primary/30'}`}
+      >
+        <div class="flex items-center gap-2 text-primary font-semibold mb-1">
+          <Icon name="mdi:calendar" size="16" />
+          {classItem.type}
+        </div>
+        <p class={`text-sm font-sans-2 font-bold ${dark ? 'text-white/90' : 'text-text'}`}>{classItem.time}</p>
+        <p class="text-sm font-sans-2 font-bold text-muted">{classItem.teacher}</p>
+      </div>
+    ))
+  }
+</div>

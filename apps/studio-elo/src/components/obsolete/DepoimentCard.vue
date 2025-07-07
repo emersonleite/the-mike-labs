@@ -2,7 +2,7 @@
   <div
     :class="[
       'rounded-2xl shadow-md p-6 h-full flex flex-col justify-between transition',
-      dark ? 'bg-dark2 text-gray-100 border border-border' : 'bg-white text-text border border-border',
+      dark ? 'bg-dark-2 text-gray-100 border border-border' : 'bg-white text-text border border-border',
     ]"
   >
     <svg class="w-8 h-8 mb-4 text-primary opacity-80" fill="currentColor" viewBox="0 0 24 24">

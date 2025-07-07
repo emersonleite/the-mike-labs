@@ -1,5 +1,5 @@
 <template>
-  <section id="quero" :class="['py-20 px-6', props.dark ? 'bg-dark1 text-gray-100' : 'bg-background text-text']">
+  <section id="quero" :class="['py-20 px-6', props.dark ? 'bg-dark-1 text-gray-100' : 'bg-background text-text']">
     <div class="max-w-4xl mx-auto text-center">
       <h2
         :class="[
@@ -57,11 +57,9 @@ const benefits = [
   'Aumente sua força e resistência',
   'Melhore sua autoestima e confiança',
   'Ambiente acolhedor para todos os níveis',
-  // adicione mais quando quiser
 ];
 
-// Substitua pelo número real e personalize a mensagem
-const whatsappNumber = '5541999999999'; // ex: 55 + DDD + número
+const whatsappNumber = '5541999770628';
 const mensagem = encodeURIComponent(
   'Oi! Vi o site do Elô Alcântara Studio de Dança e quero agendar uma aula experimental de Pole Dance!'
 );

@@ -1,5 +1,5 @@
 <template>
-  <section id="horarios" :class="['py-20 px-6', isDark ? 'bg-dark text-white' : 'bg-background text-text']">
+  <section id="horarios" :class="['py-20 px-6', isDark ? 'bg-dark-1 text-white' : 'bg-background text-text']">
     <div class="max-w-6xl mx-auto">
       <SectionTitle>Horários</SectionTitle>
 
@@ -9,7 +9,7 @@
           :key="index"
           :class="[
             'rounded-2xl p-6 shadow-md border',
-            isDark ? 'bg-dark1 border-border text-white' : 'bg-white border-border text-text',
+            isDark ? 'bg-dark-1 border-border text-white' : 'bg-white border-border text-text',
           ]"
         >
           <h3 class="text-xl font-bold text-secondary mb-4 tracking-wide text-center font-sans-2">
@@ -21,7 +21,7 @@
             :key="i"
             :class="[
               'mb-4 p-4 rounded-xl border shadow-inner flex flex-col gap-1',
-              isDark ? 'bg-dark2 border-primary/30' : 'bg-background border-primary/30',
+              isDark ? 'bg-dark-2 border-primary/30' : 'bg-background border-primary/30',
             ]"
           >
             <div class="flex items-center gap-2 text-primary font-semibold mb-1">
@@ -69,6 +69,7 @@ const schedule = [
     classes: [
       { type: 'Pole Dance', time: '08:40', teacher: 'Profª. Jana' },
       { type: 'Pole Dance', time: '12:00', teacher: 'Profª. Elô' },
+      { type: 'Pole Dance', time: '19:00', teacher: 'Profª. Elô' },
       { type: 'Pole Sensual', time: '20:00', teacher: 'Profª. Jana' },
     ],
   },
@@ -93,13 +94,16 @@ const schedule = [
   {
     day: 'Sexta',
     classes: [
-      { type: 'Pole Dance', time: '09:15', teacher: 'Profª. Elô' },
+      { type: 'Pole Heels', time: '09:15', teacher: 'Profª. Elô' },
       { type: 'Chair Dance', time: '10:30', teacher: 'Profª. Elô' },
     ],
   },
   {
     day: 'Sábado',
-    classes: [{ type: 'Pole Dance', time: '10:00', teacher: 'Atletas' }],
+    classes: [
+      { type: 'Pole Dance', time: '9:00', teacher: 'Profª. Elô' },
+      { type: 'Pole Dance', time: '10:00', teacher: 'Atletas' },
+    ],
   },
 ];
 </script>

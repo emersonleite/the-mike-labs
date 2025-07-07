@@ -1,5 +1,5 @@
 <template>
-  <section id="depoimentos" :class="['py-20 px-6', isDark ? 'bg-dark text-gray-100' : 'bg-background text-text']">
+  <section id="depoimentos" :class="['py-20 px-6', isDark ? 'bg-dark-1 text-gray-100' : 'bg-background text-text']">
     <div class="max-w-6xl mx-auto">
       <SectionTitle>Depoimentos</SectionTitle>
 
@@ -18,7 +18,7 @@
 </template>
 
 <script setup lang="ts">
-import DepoimentCard from '@/components/DepoimentCard.vue';
+import DepoimentCard from '@/components/obsolete/DepoimentCard.vue';
 import SectionTitle from '@/components/SectionTitle.vue';
 
 const props = defineProps<{

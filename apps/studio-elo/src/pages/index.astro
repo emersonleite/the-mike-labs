@@ -1,21 +1,19 @@
 ---
-import HeroSection from '@/partials/HeroSection.vue';
-import InstructorSection from '@/partials/InstructorSection.vue';
-import DepoimentSection from '@/partials/DepoimentSection.vue';
-import LocationSection from '@/partials/LocationSection.vue';
-import ScheduleSection from '@/partials/ScheduleSection.vue';
-import ScheduleCalendarSection from '@/partials/ScheduleCalendarSection_1.vue';
-import ScheduleCalendarSection2 from '@/partials/ScheduleCalendarSection_2.vue';
-import ScheduleCalendarSection3 from '@/partials/ScheduleCalendarSection_3.vue';
-import CTASection from '@/partials/CTASection.vue';
-import FaqSection from '@/partials/FaqSection.vue';
-import BenefitsSection from '@/partials/BenefitsSection.vue';
-import FooterSection from '@/partials/FooterSection.vue';
-import About from '@/partials/About.vue';
-import Header from '@/partials/Header.vue';
+import LocationSection from '@/partials/LocationSection.astro';
+import About from '@/partials/About.astro';
+import About2 from '@/partials/About2.astro';
+import Header from '@/partials/Header.astro';
 import Base from '@/templates/Base.astro';
+import BenefitsSection from '@/partials/BenefitsSection.astro';
+import CTASection from '@/partials/CTASection.astro';
+import DepoimentSection from '@/partials/DepoimentSection.astro';
+import FaqSection from '@/partials/FaqSection.astro';
+import InstructorSection from '@/partials/InstructorSection.astro';
+import FooterSection from '@/partials/FooterSection.astro';
+import HeroSection from '@/partials/HeroSection.astro';
+import ScheduleCalendarSection from '@/partials/ScheduleCalendarSection.astro';
+
 import { AppConfig } from '@/utils/AppConfig';
-import DepoimentCard from '@/components/DepoimentCard.vue';
 
 const { title } = AppConfig;
 const { description } = AppConfig;
@@ -24,20 +22,14 @@ const { description } = AppConfig;
 <Base head={{ title, description }}>
   <Header />
   <HeroSection />
-  <About />
-  <InstructorSection dark />
+  <About dark={false} />
+  <About2 dark={true} />
+  <InstructorSection dark={true} />
   <BenefitsSection />
-  <DepoimentSection dark />
-  <!-- <div>Opção 1</div>
-  <ScheduleSection />
-  <div>Opção 2</div>
-  <ScheduleCalendarSection />
-  <div>Opção 3</div>
-  <ScheduleCalendarSection2 /> -->
-
-  <ScheduleCalendarSection3 dark />
+  <DepoimentSection dark={true} />
+  <ScheduleCalendarSection dark />
   <FaqSection />
-  <LocationSection dark />
+  <LocationSection dark={true} />
   <CTASection dark />
-  <FooterSection dark />
+  <FooterSection dark={true} />
 </Base>

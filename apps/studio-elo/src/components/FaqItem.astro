@@ -1,0 +1,21 @@
+---
+import Icon from '@/components/icons/Icon.astro';
+
+const { question, answer, dark = false } = Astro.props;
+---
+
+<details
+  class={`group rounded-xl p-4 shadow-sm border transition-all
+  ${dark ? 'bg-dark-2 text-gray-100 border-border' : 'bg-white text-text border-border'}`}
+>
+  <summary
+    class="cursor-pointer font-semibold text-lg text-primary flex items-center justify-between gap-4 mb-2 hover:text-secondary transition font-sans-2"
+  >
+    <span>{question}</span>
+    <Icon name="mdi:chevron-down" size="20" class="transition-transform duration-300 group-open:rotate-180" />
+  </summary>
+
+  <p class="mt-2 text-md leading-relaxed font-sans-2">
+    {answer}
+  </p>
+</details>

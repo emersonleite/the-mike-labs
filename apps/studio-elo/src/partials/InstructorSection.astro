@@ -1,0 +1,38 @@
+---
+import SectionTitle from '@/components/SectionTitle.astro';
+import InstructorCard from '@/components/InstructorCard.astro';
+
+const { dark = false } = Astro.props;
+
+const team = [
+  {
+    nome: 'Ana Silva',
+    foto: 'https://randomuser.me/api/portraits/women/45.jpg',
+    bio: 'Instrutora certificada com 5 anos de experiência em pole dance artístico e exotic.',
+  },
+  {
+    nome: 'Carla Souza',
+    foto: 'https://randomuser.me/api/portraits/women/32.jpg',
+    bio: 'Fisioterapeuta e instrutora de alongamento. Especializada em prevenção de lesões.',
+  },
+  {
+    nome: 'Letícia Rocha',
+    foto: 'https://randomuser.me/api/portraits/women/12.jpg',
+    bio: 'Ex-aluna que hoje inspira outras mulheres com sua energia e técnica no pole sensual.',
+  },
+];
+---
+
+<section id="equipe" class={`py-20 px-6 ${dark ? 'bg-dark-1 text-gray-100' : 'bg-background text-text'}`}>
+  <div class="max-w-6xl mx-auto">
+    <SectionTitle>Equipe</SectionTitle>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {
+        team.map((instructor, index) => (
+          <InstructorCard key={index} nome={instructor.nome} foto={instructor.foto} bio={instructor.bio} dark={dark} />
+        ))
+      }
+    </div>
+  </div>
+</section>

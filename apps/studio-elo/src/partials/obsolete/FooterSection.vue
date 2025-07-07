@@ -2,7 +2,7 @@
   <footer
     :class="[
       'py-12 px-6 border-t',
-      props.dark ? 'bg-dark1 border-border text-gray-100' : 'bg-background border-border text-text',
+      props.dark ? 'bg-dark-1 border-border text-gray-100' : 'bg-background border-border text-text',
     ]"
   >
     <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
@@ -34,6 +34,7 @@
 <script setup lang="ts">
 import { defineProps } from 'vue';
 import IconInstagram from '@/components/icons/IconInstagram.vue';
+import IconTikTok from '@/components/icons/IconTikTok.vue';
 // Adicione os demais ícones quando quiser
 
 const props = defineProps<{
@@ -45,14 +46,13 @@ const currentYear = new Date().getFullYear();
 const socialLinks = [
   {
     name: 'Instagram',
-    url: 'https://instagram.com/eloalcantara',
+    url: 'https://www.instagram.com/studioeloalcantara',
     icon: IconInstagram,
   },
-  // Exemplo futuro:
-  // {
-  //   name: 'YouTube',
-  //   url: 'https://youtube.com/eloalcantara',
-  //   icon: IconYoutube,
-  // },
+  {
+    name: 'TikTok',
+    url: 'https://www.tiktok.com/@studioeloalcantara',
+    icon: IconTikTok,
+  },
 ];
 </script>

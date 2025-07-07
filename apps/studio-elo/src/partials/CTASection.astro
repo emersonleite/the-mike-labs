@@ -1,0 +1,53 @@
+---
+import Icon from '@/components/icons/Icon.astro';
+
+const { dark = false } = Astro.props;
+
+const benefits = [
+  'Aumente sua força e resistência',
+  'Melhore sua autoestima e confiança',
+  'Ambiente acolhedor para todos os níveis',
+];
+
+const whatsappNumber = '5541999770628';
+const mensagem = encodeURIComponent(
+  'Oi! Vi o site do Elô Alcântara Studio de Dança e quero agendar uma aula experimental de Pole Dance!'
+);
+const whatsappLink = `https://wa.me/${whatsappNumber}?text=${mensagem}`;
+---
+
+<section id="quero" class={`py-20 px-6 ${dark ? 'bg-dark-1 text-gray-100' : 'bg-background text-text'}`}>
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class={`text-3xl md:text-4xl font-bold mb-8 font-sans-2 text-center ${dark ? 'text-primary' : 'text-primary'}`}>
+      Pronta para se descobrir no pole?
+    </h2>
+
+    <p class={`mb-10 max-w-3xl mx-auto font-sans-2 text-lg md:text-xl ${dark ? 'text-gray-300' : 'text-gray-700'}`}>
+      Descubra os benefícios que o Pole Dance pode trazer para o seu corpo e mente:
+    </p>
+
+    <ul
+      class={`mb-12 max-w-md mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 text-left font-sans-2 text-base ${dark ? 'text-gray-300' : 'text-gray-600'}`}
+    >
+      {
+        benefits.map((benefit) => (
+          <li class="flex items-center gap-3">
+            <Icon name="mdi:tick" class="hover:text-secondary text-primary" size="1.5rem" label="Endereço" />
+            {benefit}
+          </li>
+        ))
+      }
+    </ul>
+
+    <a
+      href={whatsappLink}
+      target="_blank"
+      rel="noopener noreferrer"
+      class={`inline-block font-semibold py-4 px-8 rounded-xl transition text-white text-lg font-sans-2 ${
+        dark ? 'bg-secondary hover:bg-secondaryDark' : 'bg-secondary hover:bg-secondaryDark'
+      }`}
+    >
+      Agende agora sua aula experimental no WhatsApp
+    </a>
+  </div>
+</section>

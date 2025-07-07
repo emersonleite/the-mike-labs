@@ -2,7 +2,7 @@
   <div
     :class="[
       'rounded-2xl p-6 text-center shadow-md border transition-colors duration-300',
-      dark ? 'bg-dark2 border-border text-white' : 'bg-card border-border text-text',
+      dark ? 'bg-dark-2 border-border text-white' : 'bg-card border-border text-text',
     ]"
   >
     <img :src="foto" :alt="nome" class="w-28 h-28 mx-auto rounded-full object-cover mb-4 border-4 border-primary" />

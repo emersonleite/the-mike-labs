@@ -1,0 +1,6 @@
+---
+// Recebe as props: name (ex: "mdi:map-marker"), size (número em px ou string), class
+const { name, size = '24', class: className = '' } = Astro.props;
+---
+
+<iconify-icon icon={name} width={size} height={size} class={className}></iconify-icon>

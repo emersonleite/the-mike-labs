@@ -1,5 +1,5 @@
 <template>
-  <section id="faq" :class="['py-20 px-6', props.dark ? 'bg-dark1 text-gray-100' : 'bg-background text-text']">
+  <section id="faq" :class="['py-20 px-6', props.dark ? 'bg-dark-1 text-gray-100' : 'bg-background text-text']">
     <div class="max-w-4xl mx-auto">
       <SectionTitle>Dúvidas comuns</SectionTitle>
 
@@ -9,7 +9,7 @@
           :key="index"
           :class="[
             'rounded-xl p-4 shadow-sm border',
-            props.dark ? 'bg-dark2 text-gray-100 border-border' : 'bg-white text-text border-border',
+            props.dark ? 'bg-dark-2 text-gray-100 border-border' : 'bg-white text-text border-border',
           ]"
         >
           <summary

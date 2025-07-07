@@ -1,5 +1,5 @@
 <template>
-  <section id="equipe" :class="['py-20 px-6', isDark ? 'bg-dark text-gray-100' : 'bg-background text-text']">
+  <section id="equipe" :class="['py-20 px-6', isDark ? 'bg-dark-1 text-gray-100' : 'bg-background text-text']">
     <div class="max-w-6xl mx-auto">
       <SectionTitle>Equipe</SectionTitle>
 
@@ -18,7 +18,7 @@
 </template>
 
 <script setup lang="ts">
-import InstructorCard from '@/components/InstructorCard.vue';
+import InstructorCard from '@/components/obsolete/InstructorCard.vue';
 import SectionTitle from '@/components/SectionTitle.vue';
 
 const props = defineProps<{

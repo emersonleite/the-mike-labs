@@ -1,7 +1,7 @@
 <template>
   <section
     id="beneficios"
-    :class="['py-20 px-6 transition-colors duration-300', dark ? 'bg-dark text-white' : 'bg-background text-text']"
+    :class="['py-20 px-6 transition-colors duration-300', dark ? 'bg-dark-1 text-white' : 'bg-background text-text']"
   >
     <div class="max-w-6xl mx-auto">
       <h2 class="font-script text-5xl md:text-7xl leading-tight font-bold text-primary mb-6 text-center">Benefícios</h2>
@@ -12,10 +12,9 @@
           :key="index"
           :class="[
             'flex items-start gap-4 p-4 rounded-2xl border shadow-sm transition-colors duration-300',
-            dark ? 'bg-dark2 border-primary/30 text-white/90' : 'bg-white border-border text-text',
+            dark ? 'bg-dark-2 border-primary/30 text-white/90' : 'bg-white border-border text-text',
           ]"
         >
-          <!-- Ícone (ainda numérico) -->
           <div
             class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 text-primary text-xl font-bold font-sans-2"
           >

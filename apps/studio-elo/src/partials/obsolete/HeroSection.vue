@@ -1,7 +1,5 @@
 <template>
-  <section class="relative">
-    <VueHero />
-  </section>
+  <VueHero />
 </template>
 
 <script setup>

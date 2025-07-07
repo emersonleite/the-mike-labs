@@ -1,9 +1,9 @@
 <template>
   <header class="w-full bg-dark text-white">
-    <VueHeader />
+    <Header dark />
   </header>
 </template>
 
 <script setup>
-import VueHeader from '@/components/VueHeader.vue';
+import Header from '@/components/Header.vue';
 </script>

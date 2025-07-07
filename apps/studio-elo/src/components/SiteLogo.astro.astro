@@ -1,0 +1,38 @@
+---
+// Props com valores default
+interface Props {
+  src?: string;
+  alt: string;
+  height?: string;
+  width?: string;
+  linkTo?: string;
+  rounded?: boolean;
+}
+
+const {
+  src = '/assets/logo.png',
+  alt = '',
+  height = 'h-20',
+  width = '',
+  linkTo = '/',
+  rounded = false,
+} = Astro.props as Props;
+
+const heightClass = height;
+const widthClass = width;
+const roundedClass = rounded ? 'rounded-full' : '';
+---
+
+<div class="flex items-center gap-2">
+  {
+    linkTo ? (
+      <a href={linkTo}>
+        <img src={src} alt={alt} class={`${heightClass} ${widthClass} ${roundedClass}`} />
+      </a>
+    ) : (
+      <div>
+        <img src={src} alt={alt} class={`${heightClass} ${widthClass} ${roundedClass}`} />
+      </div>
+    )
+  }
+</div>
