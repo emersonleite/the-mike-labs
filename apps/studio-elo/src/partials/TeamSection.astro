@@ -1,10 +1,15 @@
 ---
 import SectionTitle from '@/components/SectionTitle.astro';
-import InstructorCard from '@/components/InstructorCard.astro';
+import TeamCard from '@/components/TeamCard.astro';
+import { getEntry } from 'astro:content';
 
 const { dark = false } = Astro.props;
 
-const team = [
+const { data } = await getEntry('team', 'team');
+
+const team = data.members;
+
+/* const team = [
   {
     nome: 'Ana Silva',
     foto: 'https://randomuser.me/api/portraits/women/45.jpg',
@@ -20,7 +25,7 @@ const team = [
     foto: 'https://randomuser.me/api/portraits/women/12.jpg',
     bio: 'Ex-aluna que hoje inspira outras mulheres com sua energia e técnica no pole sensual.',
   },
-];
+]; */
 ---
 
 <section id="equipe" class={`py-20 px-6 ${dark ? 'bg-dark-1 text-gray-100' : 'bg-background text-text'}`}>
@@ -30,7 +35,7 @@ const team = [
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       {
         team.map((instructor, index) => (
-          <InstructorCard key={index} nome={instructor.nome} foto={instructor.foto} bio={instructor.bio} dark={dark} />
+          <TeamCard key={index} nome={instructor.nome} foto={instructor.foto} bio={instructor.bio} dark={dark} />
         ))
       }
     </div>
