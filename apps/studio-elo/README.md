@@ -1,89 +1,60 @@
-# Astro Boilerplate with JavaScript, Vue 3 and Tailwind CSS
+# Studio Elo
 
-🚀 Astro Boilerplate is starter code for your blog or portfolio based on Astro
-with Tailwind CSS 3.0. ⚡️ Made with Astro, Javascript, Prettier,
-Tailwind CSS.
+Este projeto é um site desenvolvido com Astro, Vue 3 e Tailwind CSS, criado para o Studio Elo.
 
-## This project is a fork of the original [Astro Boilerplate](https://github.com/ixartz/Astro-boilerplate). Rewritten using Vue 3 components.
+## Sobre o projeto
 
-## Features
+- Baseado no Astro Boilerplate, reescrito com componentes Vue 3
+- Design responsivo e moderno
+- SEO otimizado (sitemap.xml, robots.txt)
+- Suporte a temas claro e escuro
+- Markdown para posts
+- Lazy loading de imagens
+- Paginação de posts
+- Destaque de sintaxe para código
 
-A complete Blog feature:
+## Tecnologias utilizadas
 
-- 🎈 Syntax Highlighting
-- 🤖 SEO friendly with sitemap.xml and robots.txt
-- 📖 Pagination
-- 🌈 Include a dark blog theme
-- ⬇️ Markdown
-- 📦 Image lazy loading
-- 💎 Responsive design
-
-Developer experience first:
-
-- 🔥 Astro
+- ⚡️ Astro
 - ❤️ Vue 3
-- 🎨 Tailwind CSS with aspect ratio and typography plugin
+- 🎨 Tailwind CSS (com plugins de aspect ratio e typography)
 
-### Philosophy
+## Requisitos
 
-- Minimal code
-- SEO-friendly
-- 🚀 Production-ready
+- Node.js e npm/yarn
 
-### Requirements
-
-- Node.js and npm/yarn
-
-#### Optional
+### Opcional
 
 - [nvm](https://github.com/nvm-sh/nvm)
 - [volta](https://volta.sh/)
 
-While Astro-boilerplate should work with the latest Node version, it has been
-tested with the versions in .nvmrc & the bottom of package.json. At current
-writing, that's Node v16.15.1
+> Recomenda-se utilizar a versão de Node especificada em `.nvmrc` ou no final do `package.json`.
 
-### Getting started
+## Como rodar localmente
 
-Run the following command on your local environment:
-
-``` bash
-git clone https://github.com/barthol0/Astro-boilerplate-vue
-cd Astro-boilerplate-vue
+```bash
 npm install
-```
-
-Then, you can run locally in development mode with live reload:
-
-``` bash
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your favorite browser
-to see your project.
+Acesse [http://localhost:3000](http://localhost:3000) no navegador.
 
-### Deploy to production (manual)
+## Build para produção
 
-You can create an optimized production build with:
-
-```shell
+```bash
 npm run build
 ```
 
-Now, your blog is ready to be deployed. All generated files are located at
-`dist` folder, which you can deploy the folder to any hosting service you
-prefer.
+Os arquivos otimizados estarão na pasta `dist`.
 
-### Contributions
+## Contribuição
 
-Everyone is welcome to contribute to this project.
-Feel free to open an issue if you have question or found a bug.
+Contribuições são bem-vindas! Abra uma issue ou pull request.
 
-### License
+## Licença
 
-Licensed under the MIT License, Copyright © 2023
+MIT © 2023 Studio Elo
 
 ---
 
-Made with ♥ by [CreativeDesignsGuru](https://creativedesignsguru.com)
-## Rewritten with ❤️ for Vue by [barthol0](https://github.com/barthol0/)
+Baseado em [Astro Boilerplate](https://github.com/ixartz/Astro-boilerplate) e reescrito para Vue por [barthol0](https://github.com/barthol0/). Customizado para Studio Elo por Emerson Leite.
