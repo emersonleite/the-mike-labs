@@ -1,10 +1,33 @@
 ---
-import HeaderSection from '@/components/Header.vue';
-// import { getEntry } from 'astro:content';
+import { getEntry } from 'astro:content';
+import MenuToggle from '@/components/MenuToggle.vue';
 
-// const { data } = await getEntry('navigation', 'menu');
+const { data } = await getEntry('navigation', 'menu');
+const navLinks = data.links;
 
-// const navLinks = data.links;
+const { dark = false } = Astro.props;
 ---
 
-<HeaderSection dark client:load />
+<header class={`${dark ? 'bg-dark-0 text-gray-100' : 'bg-background text-text'}`}>
+  <div class="relative max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <!-- Logo -->
+    <div class="flex items-center gap-2">
+      <img src="/assets/logo.png" alt="Logo Elô Alcântara" class="h-20" />
+    </div>
+
+    <!-- Menu Desktop -->
+
+    <nav class="hidden md:flex gap-6 text-md font-medium font-sans-2" class:text-gray-300={dark}>
+      {
+        navLinks.map((link) => (
+          <a href={link.href} class={`hover:text-primary transition ${dark ? 'hover:text-primary-light' : ''}`}>
+            {link.label}
+          </a>
+        ))
+      }
+    </nav>
+
+    <!-- Botão Vue (Mobile) -->
+    <MenuToggle navLinks={navLinks} :dark="dark" client:load />
+  </div>
+</header>
