@@ -1,16 +1,16 @@
 ---
 title: 'Dúvidas comuns'
 faqs:
-  - question: 'Preciso ter força ou preparo físico para começar no Pole?'
-    answer: 'Não! As aulas são pensadas para iniciantes e você desenvolverá força, coordenação e resistência progressivamente com a prática.'
-  - question: 'Nunca fiz dança antes. Consigo acompanhar?'
-    answer: 'Com certeza. O Pole Dance é para todos os níveis e corpos. Você evolui no seu ritmo com apoio da equipe.'
-  - question: 'Qual roupa devo usar para a aula?'
-    answer: 'Recomendamos roupas que deixem pernas e braços livres (como top e shorts), pois o contato com a pele ajuda na execução dos movimentos.'
-  - question: 'Homens também podem praticar Pole Dance?'
-    answer: 'Sim! O Pole é uma atividade acessível a todos. Temos turmas mistas e instrutores capacitados para receber todos os interessados, independente do gênero ou idade.'
-  - question: 'A partir de qual idade posso começar?'
-    answer: 'Não há limite de idade para começar a praticar o Pole Dance. Contudo, a avaliação do(a) interessado(a) é aconselhável.'
+  - question: 'Eu quero começar o que preciso?'
+    answer: 'Você vai precisar de um shortinho, um top e uma garrafinha de água.'
+  - question: 'Porque precisa usar pouca roupa para fazer as aulas?'
+    answer: 'Você precisa da aderência da sua pele na barra. Ela que vai te permitir realizar travas e não escorregar.'
+  - question: 'Preciso fazer academia primeiro para depois começar no Pole?'
+    answer: 'Não necessariamente, realizamos exercícios de fortalecimento durante as aulas porém quando o pole é combinado com a musculação, seu desempenho pode ser ainda melhor.'
+  - question: 'O uso de hidratante corporal atrapalha?'
+    answer: 'Depende! Evitamos o uso de hidratantes antes dos treinos. Porém precisamos de uma pele hidratada também. O ideal é hidratar a pele em dias alternado ou mais espaçados dos dias de aula.'
+  - question: 'Estou acima do peso preciso emagrecer primeiro?'
+    answer: 'Não! O Pole é uma atividade física para todos os corpos e todos os corpos possuem limitações específicas (seja ele como for) o importante é respeitar o seu.'
 ---
 
 Dúvidas frequentes sobre o Pole Dance.
