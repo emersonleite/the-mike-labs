@@ -8,24 +8,6 @@ const { dark = false } = Astro.props;
 const { data } = await getEntry('team', 'team');
 
 const team = data.members;
-
-/* const team = [
-  {
-    nome: 'Ana Silva',
-    foto: 'https://randomuser.me/api/portraits/women/45.jpg',
-    bio: 'Instrutora certificada com 5 anos de experiência em pole dance artístico e exotic.',
-  },
-  {
-    nome: 'Carla Souza',
-    foto: 'https://randomuser.me/api/portraits/women/32.jpg',
-    bio: 'Fisioterapeuta e instrutora de alongamento. Especializada em prevenção de lesões.',
-  },
-  {
-    nome: 'Letícia Rocha',
-    foto: 'https://randomuser.me/api/portraits/women/12.jpg',
-    bio: 'Ex-aluna que hoje inspira outras mulheres com sua energia e técnica no pole sensual.',
-  },
-]; */
 ---
 
 <section id="equipe" class={`py-20 px-6 ${dark ? 'bg-dark-1 text-gray-100' : 'bg-background text-text'}`}>
@@ -34,8 +16,8 @@ const team = data.members;
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       {
-        team.map((instructor, index) => (
-          <TeamCard key={index} nome={instructor.nome} foto={instructor.foto} bio={instructor.bio} dark={dark} />
+        team.map((instructor: { name: string; photo: string; bio: string }, index: number) => (
+          <TeamCard key={index} name={instructor.name} photo={instructor.photo} bio={instructor.bio} dark={dark} />
         ))
       }
     </div>
