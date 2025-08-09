@@ -5,4 +5,6 @@ export const AppConfig = {
   author: 'Emerson Leite',
   locale_region: 'pt-br',
   locale: 'pt',
+  site_url: 'https://eloalcantara.com.br/', // URL do site para SEO
+  og_image: 'https://eloalcantara.com.br/assets/logo.png', // Imagem para Open Graph/Twitter
 };
