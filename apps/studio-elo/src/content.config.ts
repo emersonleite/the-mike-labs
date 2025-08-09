@@ -41,6 +41,25 @@ const teamCollection = defineCollection({
   }),
 });
 
+const scheduleCollection = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    schedule: z.array(
+      z.object({
+        day: z.string(),
+        classes: z.array(
+          z.object({
+            type: z.string(),
+            time: z.string(),
+            teacher: z.string(),
+          })
+        ),
+      })
+    ),
+  }),
+});
+
 const navigationCollection = defineCollection({
   type: 'data',
   schema: z.object({
@@ -57,4 +76,5 @@ export const collections = {
   faqs: faqCollection,
   testimonials: testimonialsCollection,
   team: teamCollection,
+  schedule: scheduleCollection,
 };

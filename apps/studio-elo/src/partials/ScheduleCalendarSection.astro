@@ -1,62 +1,14 @@
 ---
 import SectionTitle from '@/components/SectionTitle.astro';
 import ScheduleCard from '@/components/ScheduleCard.astro';
+import { getEntry } from 'astro:content';
 
 const { dark = false } = Astro.props;
 const isDark = dark;
 
-const schedule = [
-  {
-    day: 'Segunda',
-    classes: [
-      { type: 'Pole Dance', time: '09:15', teacher: 'Profª. Elô' },
-      { type: 'Exotic', time: '17:00', teacher: 'Profª. Maria Mosson' },
-      { type: 'Pole Dance', time: '18:00', teacher: 'Profª. Maria Mosson' },
-      { type: 'Pole Dance', time: '19:00', teacher: 'Profª. Jana' },
-    ],
-  },
-  {
-    day: 'Terça',
-    classes: [
-      { type: 'Pole Dance', time: '08:40', teacher: 'Profª. Jana' },
-      { type: 'Pole Dance', time: '12:00', teacher: 'Profª. Elô' },
-      { type: 'Pole Dance', time: '19:00', teacher: 'Profª. Elô' },
-      { type: 'Pole Sensual', time: '20:00', teacher: 'Profª. Jana' },
-    ],
-  },
-  {
-    day: 'Quarta',
-    classes: [
-      { type: 'Pole Dance', time: '09:15', teacher: 'Profª. Elô' },
-      { type: 'Exotic', time: '17:00', teacher: 'Profª. Maria Mosson' },
-      { type: 'Pole Dance', time: '18:00', teacher: 'Profª. Maria Mosson' },
-      { type: 'Pole Dance', time: '19:00', teacher: 'Profª. Jana' },
-    ],
-  },
-  {
-    day: 'Quinta',
-    classes: [
-      { type: 'Pole Dance', time: '08:40', teacher: 'Profª. Jana' },
-      { type: 'Pole Dance', time: '12:00', teacher: 'Profª. Elô' },
-      { type: 'Pole Dance', time: '19:00', teacher: 'Profª. Jana' },
-      { type: 'Flex', time: '20:00', teacher: 'Profª. Nay' },
-    ],
-  },
-  {
-    day: 'Sexta',
-    classes: [
-      { type: 'Pole Heels', time: '09:15', teacher: 'Profª. Elô' },
-      { type: 'Chair Dance', time: '10:30', teacher: 'Profª. Elô' },
-    ],
-  },
-  {
-    day: 'Sábado',
-    classes: [
-      { type: 'Pole Dance', time: '9:00', teacher: 'Profª. Elô' },
-      { type: 'Pole Dance', time: '10:00', teacher: 'Atletas' },
-    ],
-  },
-];
+const scheduleEntry = await getEntry('schedule', 'schedule');
+const { data } = scheduleEntry;
+const content = data.schedule;
 ---
 
 <section id="horarios" class={`py-20 px-6 ${isDark ? 'bg-dark-1 text-white' : 'bg-background text-text'}`}>
@@ -64,7 +16,7 @@ const schedule = [
     <SectionTitle>Horários</SectionTitle>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      {schedule.map((day) => <ScheduleCard day={day.day} classes={day.classes} dark={isDark} />)}
+      {content.map((day) => <ScheduleCard day={day.day} classes={day.classes} dark={isDark} />)}
     </div>
   </div>
 </section>
