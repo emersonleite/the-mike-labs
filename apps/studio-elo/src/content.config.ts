@@ -72,9 +72,24 @@ const navigationCollection = defineCollection({
   }),
 });
 
+const aboutCollection = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    about: z.array(
+      z.object({
+        section: z.string(),
+        title: z.string(),
+        content: z.string(),
+      })
+    ),
+  }),
+});
+
 export const collections = {
   faqs: faqCollection,
   testimonials: testimonialsCollection,
   team: teamCollection,
   schedule: scheduleCollection,
+  about: aboutCollection,
 };
