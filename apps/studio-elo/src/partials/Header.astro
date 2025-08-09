@@ -1,6 +1,8 @@
 ---
 import { getEntry } from 'astro:content';
 import MenuToggle from '@/components/MenuToggle.vue';
+import { Image } from 'astro:assets';
+import logo from '../../public/assets/logo.png';
 
 const { data } = await getEntry('navigation', 'menu');
 const navLinks = data.links;
