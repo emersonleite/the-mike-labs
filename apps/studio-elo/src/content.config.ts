@@ -61,7 +61,7 @@ const scheduleCollection = defineCollection({
 });
 
 const navigationCollection = defineCollection({
-  type: 'data',
+  type: 'content',
   schema: z.object({
     links: z.array(
       z.object({
@@ -86,10 +86,25 @@ const aboutCollection = defineCollection({
   }),
 });
 
+const benefitsCollection = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    benefits: z.array(
+      z.object({
+        title: z.string(),
+        description: z.string().optional(),
+      })
+    ),
+  }),
+});
+
 export const collections = {
   faqs: faqCollection,
   testimonials: testimonialsCollection,
   team: teamCollection,
   schedule: scheduleCollection,
+  navigation: navigationCollection,
   about: aboutCollection,
+  benefits: benefitsCollection,
 };
