@@ -8,7 +8,7 @@ faqs:
   - question: 'Preciso fazer academia primeiro para depois começar no Pole?'
     answer: 'Não necessariamente, realizamos exercícios de fortalecimento durante as aulas porém quando o pole é combinado com a musculação, seu desempenho pode ser ainda melhor.'
   - question: 'O uso de hidratante corporal atrapalha?'
-    answer: 'Depende! Evitamos o uso de hidratantes antes dos treinos. Porém precisamos de uma pele hidratada também. O ideal é hidratar a pele em dias alternado ou mais espaçados dos dias de aula.'
+    answer: 'Depende! Evitamos o uso de hidratantes antes dos treinos. O ideal é hidratar a pele em dias alternados ou mais espaçados dos dias de aula.'
   - question: 'Estou acima do peso preciso emagrecer primeiro?'
     answer: 'Não! O Pole é uma atividade física para todos os corpos e todos os corpos possuem limitações específicas (seja ele como for) o importante é respeitar o seu.'
 ---
