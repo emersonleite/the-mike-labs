@@ -1,9 +1,10 @@
 import { Module } from '@nestjs/common';
-import { ResidentsModule } from './residents/residents.module';
+import { ResidentsModule } from '../residents/residents.module';
+import { NoticesModule } from '../notices/notices.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { NoticesModule } from './notices/notices.module';
 import { APP_INTERCEPTOR } from '@nestjs/core';
 import { ClassSerializerInterceptor } from '@nestjs/common';
+import { AppService } from './app.service';
 
 /**
  * O módulo principal da aplicação (AppModule).
@@ -34,6 +35,7 @@ import { ClassSerializerInterceptor } from '@nestjs/common';
       // utilizando decoradores como `@Exclude` ou `@Transform` nas entidades ou DTOs.
       useClass: ClassSerializerInterceptor,
     },
+    AppService,
   ],
 })
 export class AppModule {}
