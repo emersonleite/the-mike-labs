@@ -9,16 +9,16 @@ import {
   HttpCode,
   Query,
   ParseUUIDPipe,
-} from '@nestjs/common';
-import { ResidentsService } from './residents.service';
-import { CreateResidentDto } from './dto/create-resident.dto';
-import { UpdateResidentDto } from './dto/update-resident.dto';
+} from "@nestjs/common";
+import { ResidentsService } from "./residents.service";
+import { CreateResidentDto } from "./dto/create-resident.dto";
+import { UpdateResidentDto } from "./dto/update-resident.dto";
 
 /**
  * O controlador (ResidentsController) gerencia as rotas HTTP
  * relacionadas aos moradores e delega a lógica para o serviço (ResidentsService).
  */
-@Controller('residents') // Define a rota principal como "/residents"
+@Controller("residents") // Define a rota principal como "/residents"
 export class ResidentsController {
   constructor(private readonly residentsService: ResidentsService) {}
 
@@ -28,7 +28,7 @@ export class ResidentsController {
    * Pode aceitar parâmetros de consulta (query parameters) para filtros.
    */
   @Get() // Mapeia requisições GET para este método
-  findAll(@Query('filter') filter?: string) {
+  findAll(@Query("filter") filter?: string) {
     // Query parameters podem ser usados para filtrar dados
     return this.residentsService.findAll();
   }
@@ -38,8 +38,8 @@ export class ResidentsController {
    * Exemplo: GET /residents/1
    * Utiliza o decorador @Param para capturar parâmetros de rota.
    */
-  @Get(':id') // Mapeia requisições GET com um parâmetro de rota
-  findOne(@Param('id') id: string) {
+  @Get(":id") // Mapeia requisições GET com um parâmetro de rota
+  findOne(@Param("id") id: string) {
     return this.residentsService.findOne(id); // Conversão automática do parâmetro para número
   }
 
@@ -57,10 +57,10 @@ export class ResidentsController {
    * Rota PATCH para atualizar parcialmente um morador.
    * Exemplo: PATCH /residents/1
    */
-  @Patch(':id') // Mapeia requisições PATCH para este método
+  @Patch(":id") // Mapeia requisições PATCH para este método
   update(
-    @Param('id', ParseUUIDPipe) id: string,
-    @Body() updateResidentDto: UpdateResidentDto,
+    @Param("id", ParseUUIDPipe) id: string,
+    @Body() updateResidentDto: UpdateResidentDto
   ) {
     return this.residentsService.update(id, updateResidentDto);
   }
@@ -70,9 +70,14 @@ export class ResidentsController {
    * Exemplo: DELETE /residents/1
    * Define um código de resposta personalizado com @HttpCode.
    */
-  @Delete(':id') // Mapeia requisições DELETE para este método
+  @Delete(":id") // Mapeia requisições DELETE para este método
   @HttpCode(204) // Responde com o código HTTP 204 (No Content)
-  async remove(@Param('id') id: string) {
+  async remove(@Param("id") id: string) {
     return await this.residentsService.delete(id);
+  }
+
+  @Delete()
+  async removeAll() {
+    return await this.residentsService.deleteAll();
   }
 }
