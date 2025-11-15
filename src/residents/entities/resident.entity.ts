@@ -1,5 +1,5 @@
 import { Exclude } from 'class-transformer';
-import { Notice } from 'src/notices/entities/notice.entity';
+import { Notice } from '../../notices/entities/notice.entity';
 import {
   Column,
   CreateDateColumn,
