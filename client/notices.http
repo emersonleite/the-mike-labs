@@ -10,7 +10,7 @@ Content-Type: application/json
   "description": "Esse é um alerta grave",
   "priority": "Alta",
   "status": "Ativo",
-  "createdBy":"c1af6f88-2e39-4308-97f1-8975b57b6b18"
+  "createdBy":"a51f9beb-527e-4b15-bc37-900c017aea8e"
 }
 
 ###

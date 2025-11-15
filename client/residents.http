@@ -9,7 +9,7 @@ Content-Type: application/json
   "name": "Emerson Batista",
   "apartment": "11",
   "building":"Bloco F",
-  "email": "emerson.bl.5476+678@gmail.com",
+  "email": "emerson.bl.5476+688@gmail.com",
   "password":"142743Co@#$7*",
   "phone":"5599985203020"
 }
@@ -21,7 +21,7 @@ Content-Type: application/json
 
 ###
 # @name GetOne
-GET {{baseUrl}}/residents/096e58a7-e89b-4665-af3c-2acadbcf89a0 HTTP/1.1
+GET {{baseUrl}}/residents/a51f9beb-527e-4b15-bc37-900c017aea8e HTTP/1.1
 Content-Type: application/json
 
 ###
@@ -36,6 +36,11 @@ Content-Type: application/json
 ###
 # @name Delete
 DELETE  {{baseUrl}}/residents/d27ae9e3-b639-4fdf-b502-190942807e22 HTTP/1.1
+Content-Type: application/json
+
+###
+# @name DeleteAll
+DELETE  {{baseUrl}}/residents/ HTTP/1.1
 Content-Type: application/json
 
 
